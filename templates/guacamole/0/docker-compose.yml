@@ -1,0 +1,56 @@
+version: '2'
+services:
+  mysql:
+    image: ${MYSQLIMAGE}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${PASSWORD_DB}
+
+        {{- if ne .Values.DNS_SERVER "none"}}
+      dns: ${DNS_SERVER}
+        {{- end}}
+
+        {{- if ne .Values.DNS_SERVER "none"}}
+      dns_search: ${DNS_SEARCH}
+        {{- end}}
+
+  guacd:
+    image: guacamole/guacd
+
+      {{- if ne .Values.DNS_SERVER "none"}}
+    dns: ${DNS_SERVER}
+      {{- end}}
+
+      {{- if ne .Values.DNS_SERVER "none"}}
+    dns_search: ${DNS_SEARCH}
+      {{- end}}
+
+  guacamole:
+    image: guacamole/guacamole
+
+      {{- if eq .Values.MYSQLIMAGE "mysql"}}
+
+    environment:
+      - MYSQL_DATABASE=${NAME_DB}
+      - MYSQL_USER=${USER_DB}
+      - MYSQL_PASSWORD=${USERPASSWORD_DB}
+      {{- else}}
+
+    environment:
+      - MYSQL_DATABASE=guacamole_db
+      - MYSQL_USER=guacamole
+      - MYSQL_PASSWORD=Password1
+      {{- end}}
+
+    links:
+      - guacd:guacd
+      - mysql:mysql
+    ports:
+      - ${GUACAMOLE_PORT}:8080
+
+      {{- if ne .Values.DNS_SERVER "none"}}
+    dns: ${DNS_SERVER}
+      {{- end}}
+
+      {{- if ne .Values.DNS_SERVER "none"}}
+    dns_search: ${DNS_SEARCH}
+      {{- end}}

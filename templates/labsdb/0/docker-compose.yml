@@ -1,0 +1,16 @@
+version: '2'
+services:
+  labsdb:
+    image: ${DBIMAGE}
+
+      {{- if eq .Values.DBIMAGE "oracle11-labsq-01"}}
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+
+    ports:
+      - ${PORT22}:22
+      - ${PORT1521}:1521
+      {{- else}}
+    ports:
+      - ${PORT1433}:1433
+      {{- end}}

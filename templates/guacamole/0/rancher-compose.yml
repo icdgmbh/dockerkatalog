@@ -1,0 +1,68 @@
+version: '2'
+catalog:
+  name: "Guacamole"
+  version: "v1.0"
+  description: "Guacamole 4 RDP"
+  uuid: guacamole-1
+  minimum_rancher_version: v1.2.0
+  questions:
+
+    - variable: "MYSQLIMAGE"
+      label: "MySQL Image"
+      description: "mysql is a new Default-mysql-Server. | tiedy/mysqlguac is a Guacamole-mysql-Server with Rancher default Parameters. "
+      options:
+        - mysql
+        - tiedy/mysqlguac
+      required: true
+      default: "mysql"
+      type: "enum"
+
+    - variable: "PASSWORD_DB"
+      label: "MySQL Password"
+      description: "Your mysql Password"
+      required: true
+      type: "password"
+
+    - variable: "NAME_DB"
+      label: "Database Name"
+      description: "Your Database name"
+      required: true
+      default: "guacamole_db"
+      type: "string"
+
+    - variable: "USER_DB"
+      label: "Database User"
+      description: "Your Database User"
+      required: true
+      default: "guacamole"
+      type: "string"
+
+    - variable: "USERPASSWORD_DB"
+      label: "Database User Password"
+      description: "Your Database User Password"
+      required: true
+      default: "Password1"
+      type: "password"
+
+    - variable: "DNS_SERVER"
+      label: "DNS Server"
+      description: "Your DNS Server"
+      required: false
+      default: "none"
+      type: "string"
+
+    - variable: "DNS_SEARCH"
+      label: "DNS Search Domain"
+      description: "Your DNS Search Domain"
+      required: false
+      default: "none"
+      type: "string"
+
+    - variable: "GUACAMOLE_PORT"
+      label: "Guacamole Port"
+      description: "default 8080"
+      required: true
+      default: "8080"
+      type: "string"
+
+guacamole:

@@ -1,0 +1,40 @@
+version: '2'
+catalog:
+  name: "Labsdb"
+  version: "v1.0"
+  description: "Labs DB"
+  uuid: labsdb-1
+  minimum_rancher_version: v1.2.0
+  questions:
+    - variable: "DBIMAGE"
+      label: "DB Image"
+      description: "Select some Image"
+      options: 
+        - oracle11-labsq-01
+        - mssql2017-labsq-01
+      required: true
+      default: "oracle11-labsq-01"
+      type: "enum"
+
+    - variable: "PORT1433"
+      label: "Port 1433 für MsSQL"
+      description: "Port 1433"
+      required: true
+      default: "14330"
+      type: "int"
+
+    - variable: "PORT22"
+      label: "Port 22 für Oracle"
+      description: "Port 22"
+      required: true
+      default: "2020"
+      type: "int"
+
+    - variable: "PORT1521"
+      label: "Port 1521 für Oracle"
+      description: "Port 1521"
+      required: true
+      default: "15210"
+      type: "int"
+
+labsdb:
