@@ -20,19 +20,22 @@ catalog:
     - variable: "PORT1433"
       label: "Port 1433 für MsSQL"
       description: "Port 1433"
-      required: false
+      required: true
+      default: "1433"
       type: "int"
 
     - variable: "PORT22"
       label: "Port 22 für Oracle"
       description: "Port 22"
-      required: false
+      required: true
+      default: "22"
       type: "int"
 
     - variable: "PORT1521"
       label: "Port 1521 für Oracle"
       description: "Port 1521"
-      required: false
+      default: "1521"
+      required: true
       type: "int"
 
 labsdb:
