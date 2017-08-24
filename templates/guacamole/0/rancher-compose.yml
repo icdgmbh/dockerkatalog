@@ -14,7 +14,7 @@ catalog:
         - mysql
         - tiedy/mysqlguac
       required: true
-      default: "mysql"
+      default: "tiedy/mysqlguac"
       type: "enum"
 
     - variable: "PASSWORD_DB"
@@ -39,7 +39,7 @@ catalog:
 
     - variable: "USERPASSWORD_DB"
       label: "Database User Password"
-      description: "Your Database User Password"
+      description: "Your Database User Password (default:Password1)"
       required: true
       default: "Password1"
       type: "password"

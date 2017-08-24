@@ -6,10 +6,11 @@ catalog:
   uuid: labsdb-1
   minimum_rancher_version: v1.2.0
   questions:
+
     - variable: "DBIMAGE"
       label: "DB Image"
       description: "Select some Image"
-      options: 
+      options:
         - oracle11-labsq-01
         - mssql2017-labsq-01
       required: true
@@ -19,22 +20,19 @@ catalog:
     - variable: "PORT1433"
       label: "Port 1433 für MsSQL"
       description: "Port 1433"
-      required: true
-      default: "14330"
+      required: false
       type: "int"
 
     - variable: "PORT22"
       label: "Port 22 für Oracle"
       description: "Port 22"
-      required: true
-      default: "2020"
+      required: false
       type: "int"
 
     - variable: "PORT1521"
       label: "Port 1521 für Oracle"
       description: "Port 1521"
-      required: true
-      default: "15210"
+      required: false
       type: "int"
 
 labsdb:
