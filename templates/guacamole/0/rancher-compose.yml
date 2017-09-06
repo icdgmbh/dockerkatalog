@@ -21,7 +21,7 @@ catalog:
       label: "MySQL Password"
       description: "Your mysql Password"
       required: true
-      type: "password"
+      type: "string"
 
     - variable: "NAME_DB"
       label: "Database Name"
@@ -42,7 +42,7 @@ catalog:
       description: "Your Database User Password (default:Password1)"
       required: true
       default: "Password1"
-      type: "password"
+      type: "string"
 
     - variable: "DNS_SERVER"
       label: "DNS Server"
