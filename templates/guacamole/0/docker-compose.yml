@@ -3,15 +3,14 @@ services:
   mysql:
     image: ${MYSQLIMAGE}
     environment:
-      
-      - MYSQL_ROOT_PASSWORD=${PASSWORD_DB}
+        - MYSQL_ROOT_PASSWORD=${PASSWORD_DB}
 
         {{- if ne .Values.DNS_SERVER "none"}}
-      dns: ${DNS_SERVER}
+    dns: ${DNS_SERVER}
         {{- end}}
 
         {{- if ne .Values.DNS_SERVER "none"}}
-      dns_search: ${DNS_SEARCH}
+    dns_search: ${DNS_SEARCH}
         {{- end}}
 
   guacd:

@@ -21,7 +21,7 @@ catalog:
       label: "MySQL Password"
       description: "Your mysql Password"
       required: true
-      type: "string"
+      type: "password"
 
     - variable: "NAME_DB"
       label: "Database Name"
