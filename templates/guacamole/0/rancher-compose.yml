@@ -3,7 +3,7 @@ catalog:
   name: "Guacamole"
   version: "v1.0"
   description: "Guacamole 4 RDP"
-  uuid: guacamole1
+  uuid: guacamole-1
   minimum_rancher_version: v1.2.0
   questions:
 

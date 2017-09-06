@@ -3,6 +3,7 @@ services:
   mysql:
     image: ${MYSQLIMAGE}
     environment:
+      
       - MYSQL_ROOT_PASSWORD=${PASSWORD_DB}
 
         {{- if ne .Values.DNS_SERVER "none"}}
