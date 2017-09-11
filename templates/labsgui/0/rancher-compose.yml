@@ -7,35 +7,48 @@ catalog:
   minimum_rancher_version: v1.2.0
   questions:
 
-    - variable: "DBIMAGE"
-      label: "DB Image"
+    - variable: "GUIIMAGE"
+      label: "GUI Image"
       description: "Select some Image"
       options:
-        - oracle11-labsq-01
-        - mssql2017-labsq-01
+        - icd-gui
+        - icd-gui-NoTomcatGui
       required: true
-      default: "oracle11-labsq-01"
+      default: "icd-gui"
       type: "enum"
 
-    - variable: "PORT1433"
-      label: "Port 1433 für MsSQL"
-      description: "Port 1433"
+    - variable: "LINKPATH"
+      label: "Linked Path"
+      description: "Host Path to /usr/local/gui"
+      default: "//vm-partner1"
       required: true
-      default: "1433"
+      type: "string"
+
+    - variable: "RESTART"
+      lable: "Always Restart"
+      description: "Docker Always Restart"
+      default: true
+      type: "boolean"
+
+    - variable: "PORT1577"
+      label: "Port 1577 (boxsrv)"
+      description: "Port 1577"
+      required: true
+      default: "1577"
       type: "int"
 
-    - variable: "PORT22"
-      label: "Port 22 für Oracle"
-      description: "Port 22"
+    - variable: "PORT1581"
+      label: "Port 1581 (guisrv)"
+      description: "Port 1581"
       required: true
-      default: "22"
+      default: "1581"
       type: "int"
 
-    - variable: "PORT1521"
-      label: "Port 1521 für Oracle"
-      description: "Port 1521"
-      default: "1521"
+    - variable: "PORT8080"
+      label: "Port 8080 (tomcat)"
+      description: "Port 8080"
       required: true
+      default: "8080"
       type: "int"
 
 labsdb:

@@ -1,16 +1,15 @@
 version: '2'
 services:
   labsdb:
-    image: ${DBIMAGE}
+    image: ${GUIIMAGE}
 
-      {{- if eq .Values.DBIMAGE "oracle11-labsq-01"}}
-    environment:
-      - ORACLE_ALLOW_REMOTE=true
+    {{- if eq .Values.DBIMAGE "true"}}
+    restart: always
+    {{- end}}
 
     ports:
-      - ${PORT22}:22
-      - ${PORT1521}:1521
-      {{- else}}
-    ports:
-      - ${PORT1433}:1433
-      {{- end}}
+      - ${PORT1577}:1577
+      - ${PORT1581}:1581
+      - ${PORT8080}:8080
+    volumes:
+      - ${LINKPATH}:/usr/local/gui
