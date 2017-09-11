@@ -1,6 +1,6 @@
 version: '2'
 services:
-  labsdb:
+  labsgui:
     image: ${GUIIMAGE}
 
       {{- if eq .Values.RESTART "true"}}
