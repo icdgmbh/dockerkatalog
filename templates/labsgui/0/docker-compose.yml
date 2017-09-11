@@ -17,5 +17,4 @@ services:
     dns: 192.168.0.1
     dns_search: icd-gmbh.de
     cap_add:
-      - SYS_ADMIN
-      - DAC_READ_SEARCH
+      - ALL

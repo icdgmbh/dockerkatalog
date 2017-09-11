@@ -51,4 +51,4 @@ catalog:
       default: "8080"
       type: "int"
 
-labsdb:
+labsgui:
