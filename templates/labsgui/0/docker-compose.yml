@@ -13,3 +13,4 @@ services:
       - ${PORT8080}:8080
     volumes:
       - ${LINKPATH}:/usr/local/gui
+      - //vm-demo1:/usr/local/gui/demo1
