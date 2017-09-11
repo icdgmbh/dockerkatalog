@@ -3,9 +3,9 @@ services:
   labsdb:
     image: ${GUIIMAGE}
 
-    {{- if eq .Values.DBIMAGE "true"}}
+      {{- if eq .Values.RESTART "true"}}
     restart: always
-    {{- end}}
+      {{- end}}
 
     ports:
       - ${PORT1577}:1577
