@@ -19,3 +19,5 @@ services:
     privileged: true
     cap_add:
       - ALL
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
