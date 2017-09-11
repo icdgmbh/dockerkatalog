@@ -1,9 +1,9 @@
 version: '2'
 catalog:
-  name: "Labsdb"
+  name: "Labsgui"
   version: "v1.0"
-  description: "Labs DB"
-  uuid: labsdb-1
+  description: "Labs GUI"
+  uuid: labsgui-1
   minimum_rancher_version: v1.2.0
   questions:
 
@@ -20,7 +20,7 @@ catalog:
     - variable: "LINKPATH"
       label: "Linked Path"
       description: "Host Path to /usr/local/gui"
-      default: "//vm-partner1"
+      default: "/vm-partner1"
       required: true
       type: "string"
 

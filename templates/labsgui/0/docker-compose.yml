@@ -19,5 +19,3 @@ services:
     cap_add:
       - SYS_ADMIN
       - DAC_READ_SEARCH
-    security_opt:
-      - seccomp:unconfined
