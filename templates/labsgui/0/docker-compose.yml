@@ -11,8 +11,8 @@ services:
       - ${PORT1577}:1577
       - ${PORT1581}:1581
       - ${PORT8080}:8080
-    volumes:
-      - ${LINKPATH}:/usr/local/gui
+  #  volumes:
+      #- ${LINKPATH}:/usr/local/gui
 
     dns: 192.168.0.1
     dns_search: icd-gmbh.de
