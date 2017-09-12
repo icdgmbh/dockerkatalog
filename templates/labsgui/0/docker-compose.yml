@@ -17,6 +17,7 @@ services:
     dns: 192.168.0.1
     dns_search: icd-gmbh.de
     privileged: true
+    # TEST
     entrypoint: /usr/local/dockerinit.sh
     cap_add:
       - ALL
