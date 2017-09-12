@@ -27,7 +27,7 @@ catalog:
     - variable: "RESTART"
       lable: "Always Restart"
       description: "Docker Always Restart"
-      default: true
+      default: false
       type: "boolean"
 
     - variable: "PORT1577"
