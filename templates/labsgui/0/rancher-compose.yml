@@ -24,11 +24,38 @@ catalog:
       required: true
       type: "string"
 
+    - variable: "OWNDNS"
+      lable: "DNS and Search activate?"
+      description: "Own DNS and Search Domain?"
+      default: true
+      type: "boolean"
+
+    - variable: "DNS_SERVER"
+      label: "DNS Server"
+      description: "Your DNS Server"
+      required: false
+      default: "192.168.0.1"
+      type: "string"
+
+    - variable: "DNS_SEARCH"
+      label: "DNS Search Domain"
+      description: "Your DNS Search Domain"
+      required: false
+      default: "icd-gmbh.de"
+      type: "string"
+
     - variable: "RESTART"
       lable: "Always Restart"
       description: "Docker Always Restart"
       default: false
       type: "boolean"
+
+    - variable: "PORT1578"
+      label: "Port 1578 (boxcli)"
+      description: "Port 1578"
+      required: true
+      default: "1578"
+      type: "int"
 
     - variable: "PORT1577"
       label: "Port 1577 (boxsrv)"

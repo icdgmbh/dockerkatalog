@@ -9,15 +9,16 @@ services:
 
     ports:
       - ${PORT1577}:1577
+      - ${PORT1578}:1578
       - ${PORT1581}:1581
       - ${PORT8080}:8080
-#    volumes:
-#      - ${LINKPATH}:/usr/local/gui
-
-    dns: 192.168.0.1
-    dns_search: icd-gmbh.de
     privileged: true
     cap_add:
       - ALL
       - SYS_ADMIN
       - DAC_READ_SEARCH
+
+      {{- if eq .Values.OWNDNS "true"}}
+    dns: ${DNS_SERVER}
+    dns_search: ${DNS_SEARCH}
+      {{- end}}
