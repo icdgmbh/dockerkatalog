@@ -23,6 +23,12 @@ catalog:
       default: "/vm-partner1"
       required: true
       type: "string"
+      
+    - variable: "RESTART"
+      lable: "Always Restart"
+      description: "Docker Always Restart"
+      default: false
+      type: "boolean"
 
     - variable: "OWNDNS"
       lable: "DNS and Search activate?"
@@ -43,12 +49,6 @@ catalog:
       required: false
       default: "icd-gmbh.de"
       type: "string"
-
-    - variable: "RESTART"
-      lable: "Always Restart"
-      description: "Docker Always Restart"
-      default: false
-      type: "boolean"
 
     - variable: "PORT1578"
       label: "Port 1578 (boxcli)"
