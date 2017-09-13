@@ -6,6 +6,17 @@ catalog:
   uuid: labsgui-1
   minimum_rancher_version: v1.2.0
   questions:
+    - variable: "RESTART"
+      lable: "Always Restart"
+      description: "Docker Always Restart"
+      default: false
+      type: "boolean"
+
+    - variable: "OWNDNS"
+      lable: "DNS and Search activate?"
+      description: "Own DNS and Search Domain?"
+      default: true
+      type: "boolean"
 
     - variable: "GUIIMAGE"
       label: "GUI Image"
@@ -23,18 +34,6 @@ catalog:
       default: "/vm-partner1"
       required: true
       type: "string"
-      
-    - variable: "RESTART"
-      lable: "Always Restart"
-      description: "Docker Always Restart"
-      default: false
-      type: "boolean"
-
-    - variable: "OWNDNS"
-      lable: "DNS and Search activate?"
-      description: "Own DNS and Search Domain?"
-      default: true
-      type: "boolean"
 
     - variable: "DNS_SERVER"
       label: "DNS Server"
