@@ -22,9 +22,9 @@ catalog:
       label: "GUI Image"
       description: "Select some Image"
       options:
-        - icd-gui
+        - labsgui-3-1
       required: true
-      default: "icd-gui"
+      default: "labsgui-3-1"
       type: "enum"
 
     - variable: "DNS_SERVER"
