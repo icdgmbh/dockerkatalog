@@ -23,17 +23,9 @@ catalog:
       description: "Select some Image"
       options:
         - icd-gui
-        - icd-gui-NoTomcatGui
       required: true
       default: "icd-gui"
       type: "enum"
-
-    - variable: "LINKPATH"
-      label: "Linked Path"
-      description: "Host Path to /usr/local/gui"
-      default: "/vm-partner1"
-      required: true
-      type: "string"
 
     - variable: "DNS_SERVER"
       label: "DNS Server"
@@ -54,13 +46,6 @@ catalog:
       description: "Port 1578"
       required: true
       default: "1578"
-      type: "int"
-
-    - variable: "PORT1577"
-      label: "Port 1577 (boxsrv)"
-      description: "Port 1577"
-      required: true
-      default: "1577"
       type: "int"
 
     - variable: "PORT1581"

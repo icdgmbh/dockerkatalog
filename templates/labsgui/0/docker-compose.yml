@@ -8,7 +8,6 @@ services:
       {{- end}}
 
     ports:
-      - ${PORT1577}:1577
       - ${PORT1578}:1578
       - ${PORT1581}:1581
       - ${PORT8080}:8080
@@ -17,6 +16,7 @@ services:
       - ALL
       - SYS_ADMIN
       - DAC_READ_SEARCH
+
 
       {{- if eq .Values.OWNDNS "true"}}
     dns: ${DNS_SERVER}
