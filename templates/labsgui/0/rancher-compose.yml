@@ -58,7 +58,7 @@ catalog:
     - variable: "PORT8080"
       label: "Port 8080 (tomcat)"
       description: "Port 8080"
-      required: false
+      required: true
       default: ""
       type: "int"
 
