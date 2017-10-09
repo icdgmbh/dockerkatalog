@@ -22,9 +22,10 @@ catalog:
       label: "GUI Image"
       description: "Select some Image"
       options:
-        - labsgui-3-1
+        - gui-vpartner-t7
+        - gui-vpartner-t85
       required: true
-      default: "labsgui-3-1"
+      default: "gui-vpartner-t85"
       type: "enum"
 
     - variable: "DNS_SERVER"
