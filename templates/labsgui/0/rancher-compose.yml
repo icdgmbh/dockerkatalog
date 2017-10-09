@@ -59,7 +59,7 @@ catalog:
       label: "Port 8080 (tomcat)"
       description: "Port 8080"
       required: true
-      default: "8080"
+      default: ""
       type: "int"
 
 labsgui:
