@@ -4,7 +4,9 @@
 
 ### Options
 
-**Default Values are:** (Image: tiedy/mysqlguac)
-* Database Name = guacamole_db
-* Database User = guacamole
-* Database User Password = Password1
+**Default Values are:** (Image: enalean/tuleap-aio)
+* Host = localhost
+* Volumen = tuleap-data
+* Port 80 = 7080
+* Port 443 = 7443
+* Port 22 = 7022

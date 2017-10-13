@@ -25,7 +25,7 @@ catalog:
       label: "80 Port"
       description: "default 7080"
       required: true
-      default: "8080"
+      default: "7080"
       type: "int"
 
     - variable: "PORT443"
