@@ -1,0 +1,45 @@
+version: '2'
+catalog:
+  name: "Tuleap"
+  version: "v1.0"
+  description: "Tuleap"
+  uuid: tuleap-1
+  minimum_rancher_version: v1.2.0
+  questions:
+
+    - variable: "VIRTUAL_HOST"
+      label: "Host"
+      description: "Host"
+      required: true
+      default: "localhost"
+      type: "string"
+
+    - variable: "VOLUM"
+      label: "Volumen"
+      description: "Volumen"
+      required: true
+      default: "tuleap-data"
+      type: "string"
+
+    - variable: "PORT80"
+      label: "80 Port"
+      description: "default 7080"
+      required: true
+      default: "8080"
+      type: "int"
+
+    - variable: "PORT443"
+      label: "443 Port"
+      description: "default 443"
+      required: true
+      default: "7443"
+      type: "int"
+
+    - variable: "PORT22"
+      label: "22 Port"
+      description: "default 7022"
+      required: true
+      default: "7022"
+      type: "int"
+
+tuleap:

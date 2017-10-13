@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mysql:
+    image: enalean/tuleap-aio
+    environment:
+      - VIRTUAL_HOST=${VOLUM}
+    ports:
+      - ${PORT80}:80
+      - ${PORT443}:443
+      - ${PORT22}:22
