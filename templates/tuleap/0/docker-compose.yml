@@ -8,3 +8,5 @@ services:
       - ${PORT80}:80
       - ${PORT443}:443
       - ${PORT22}:22
+    volumes:
+      - ${VOLUM}:/data
