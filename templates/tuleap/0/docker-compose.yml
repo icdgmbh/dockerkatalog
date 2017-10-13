@@ -1,6 +1,6 @@
 version: '2'
 services:
-  mysql:
+  tuleap:
     image: enalean/tuleap-aio
     environment:
       - VIRTUAL_HOST=${VOLUM}
