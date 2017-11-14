@@ -1,0 +1,48 @@
+version: '2'
+services:
+  db:
+    image: ${DBIMAGE}
+    container_name: ${COMNAME}-db
+    networks:
+      - ${COMNAME}
+
+    expose:
+      - "1433"
+      - "1521"
+
+  gui:
+    image: ${GUIIMAGE}
+    container_name: ${COMNAME}-gui
+    networks:
+      - ${COMNAME}
+
+    expose:
+     - "1578"
+     - "1581"
+     - "8080"
+
+  labs:
+    image: ${LABSIMAGE}
+    container_name: ${COMNAME}-labs
+    networks:
+      - ${COMNAME}
+
+    expose:
+     - "8080"
+
+  licence:
+    image: ${LICENCEIMAGE}
+    container_name: ${COMNAME}-licence
+    networks:
+      - ${COMNAME}
+
+    expose:
+     - "1521"
+     - "8080"
+
+    links:
+      - db:vm-partner1
+
+networks:
+  ${COMNAME}:
+    driver: bridge

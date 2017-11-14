@@ -1,0 +1,65 @@
+version: '2'
+catalog:
+  name: "LabsQ"
+  version: "v1.0"
+  description: "LABS/Q"
+  uuid: labsq-1
+  minimum_rancher_version: v1.2.0
+  questions:
+
+    - variable: "COMNAME"
+      label: "Name"
+      description: "Name"
+      required: true
+      type: "string"
+
+    - variable: "PORT1578"
+      label: "Port 1578"
+      description: "Port 1578"
+      required: true
+      default: "1578"
+      type: "int"
+
+    - variable: "DBIMAGE"
+      label: "DB Image"
+      description: "Select some Image"
+      options:
+        - mssql2017-labsq-01
+        - mssql2017-labsq-03
+        - mssql2017-labsq-04
+        - oracle11-labsq-01
+      required: true
+      default: "mssql2017-labsq-04"
+      type: "enum"
+
+    - variable: "GUIIMAGE"
+      label: "GUI Image"
+      description: "Select some Image"
+      options:
+        - gui-vpartner-t7
+        - gui-vpartner-t85
+      required: true
+      default: "gui-vpartner-t85"
+      type: "enum"
+
+    - variable: "LABSIMAGE"
+      label: "LABS Image"
+      description: "Select some Image"
+      options:
+        - labs-vpartner-t7
+        - labs-vpartner-t85
+      required: true
+      default: "labs-vpartner-t85"
+      type: "enum"
+
+    - variable: "LICENCEIMAGE"
+      label: "Licence Server Image"
+      description: "Select some Image"
+      options:
+        - licence-vpartner-t7
+        - licence-vpartner-t85
+      required: true
+      default: "licence-vpartner-t85"
+      type: "enum"
+
+labsq:
